@@ -1,4 +1,4 @@
-async function criarPeca(nome, preco, quantidade){
+async function peca(nome, preco, quantidade){
     return {
         nome,
         preco,
@@ -6,4 +6,4 @@ async function criarPeca(nome, preco, quantidade){
     };
 }
 
-export default criarPeca;
+export default peca;

@@ -1,15 +1,5 @@
-import gerenciador from "./pecas/gerenciador.js";
-
 async function addItemAlmoxarifado(pecas, item){
     pecas.push(item);
-}
-
-async function deletarPeca(pecas, nome){
-    const index = pecas.findIndex((item) => item.nome === nome);
-
-    if(index !== -1){
-        pecas.splice(index, 1);
-    }
 }
 
 async function removerPeca(pecas, item) {
@@ -33,17 +23,16 @@ async function removerPeca(pecas, item) {
 
 
 async function exibirPecas(pecas){
-    console.log("\nAlmoxarifado::\n");
+    console.log("\nAlmoxarifado atual:\n");
 
     pecas.forEach((item, index) => {
-        console.log(`${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade}x`);
+        console.log(`${index + 1}. ${item.nome} - R$ ${item.preco} | ${item.quantidade}x\n`);
     })
 }
 
 export {
     addItemAlmoxarifado,
     exibirPecas,
-    deletarPeca,
     removerPeca
 }
 
